@@ -91,17 +91,18 @@
         updateBannerVisibility();
       }
 
-  var buildUrl = "Build";
-var loaderUrl = buildUrl + "/{{{LOADER_FILENAME}}}?id={{{PRODUCT_VERSION}}}";
+var buildUrl = "Build";
+var loaderUrl = buildUrl + "/unity-build.loader.js?id=1.0";
 var config = {
-  dataUrl: buildUrl + "/{{{DATA_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
-  frameworkUrl: buildUrl + "/{{{FRAMEWORK_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
-  codeUrl: buildUrl + "/{{{CODE_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
+  dataUrl: buildUrl + "/unity-build.data?id=1.0",
+  frameworkUrl: buildUrl + "/unity-build.framework.js?id=1.0",
+  codeUrl: buildUrl + "/unity-build.wasm?id=1.0",
   streamingAssetsUrl: "StreamingAssets",
-  companyName: "{{{COMPANY_NAME}}}",
-  productName: "{{{PRODUCT_NAME}}}",
-  productVersion: "{{{PRODUCT_VERSION}}}",
+  companyName: "Insthync",
+  productName: "Unity WebGL",
+  productVersion: "1.0",
   showBanner: unityShowBanner,
+
 
         };
 
