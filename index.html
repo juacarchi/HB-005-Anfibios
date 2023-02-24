@@ -91,17 +91,18 @@
         updateBannerVisibility();
       }
 
-        var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/Build.loader.js";
-        var config = {
-            dataUrl: buildUrl + "/Build.data.gz",
-            frameworkUrl: buildUrl + "/Build.framework.js.gz",
-            codeUrl: buildUrl + "/Build.wasm.gz",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "HappyLearning",
-            productName: "HB-005-Anfibios",
-            productVersion: "1.0",
-            showBanner: unityShowBanner,
+  var buildUrl = "Build";
+var loaderUrl = buildUrl + "/{{{LOADER_FILENAME}}}?id={{{PRODUCT_VERSION}}}";
+var config = {
+  dataUrl: buildUrl + "/{{{DATA_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
+  frameworkUrl: buildUrl + "/{{{FRAMEWORK_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
+  codeUrl: buildUrl + "/{{{CODE_FILENAME}}}?id={{{PRODUCT_VERSION}}}",
+  streamingAssetsUrl: "StreamingAssets",
+  companyName: "{{{COMPANY_NAME}}}",
+  productName: "{{{PRODUCT_NAME}}}",
+  productVersion: "{{{PRODUCT_VERSION}}}",
+  showBanner: unityShowBanner,
+
         };
 
       // By default Unity keeps WebGL canvas render target size matched with
